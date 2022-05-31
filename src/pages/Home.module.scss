@@ -1,6 +1,20 @@
+@import '../mainStyles.scss';
 .home__page {
+	width: 100%;
+	min-height: 100vh;
 	padding: 0;
 	margin: 0;
-	background-color: #fafafa;
-	color: red;
+	background-color: $strong-cyan;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+
+	&_logo {
+		align-self: center;
+		width: 8.67rem;
+		height: auto;
+		margin: 1rem 0 3rem 0;
+	}
 }
+// mobile styles

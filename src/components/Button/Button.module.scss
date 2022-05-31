@@ -1,0 +1,24 @@
+@import '../../mainStyles.scss';
+
+.button {
+	width: 100%;
+	text-align: center;
+	background-color: $very-dark-cyan;
+	color: $white;
+	font-weight: 700;
+	border-radius: 0.5rem;
+	padding: 0.6rem 0;
+	-webkit-transition: all 0.5s ease;
+	transition: all 0.5s ease;
+	text-transform: uppercase;
+
+	cursor: pointer;
+	&:hover {
+		background-color: $grayish-cyan;
+	}
+
+	&:active {
+		background-color: $strong-cyan;
+		color: $very-dark-cyan;
+	}
+}

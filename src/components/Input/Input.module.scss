@@ -1,0 +1,42 @@
+@import '../../mainStyles.scss';
+
+.container {
+	display: flex;
+	flex-direction: column;
+
+	.label_wrapper {
+		color: $dark-grayish-cyan;
+		display: flex;
+		justify-content: space-between;
+
+		p {
+			margin: 0;
+			padding: 0;
+			font-size: 1.2rem;
+			color: rgba(71, 25, 25, 0.658);
+		}
+	}
+	.input_wrapper {
+		position: relative;
+		input {
+			border: 1px solid #ccc;
+			background-color: $very-light-grayish-cyan;
+			border: none;
+			width: 100%;
+			border-radius: 0.5rem;
+			color: $very-dark-cyan;
+			text-align: right;
+			padding: 0.5rem 2.4rem;
+
+			&:focus {
+				outline: none;
+				border: 2px solid $strong-cyan;
+			}
+		}
+		img {
+			position: absolute;
+			left: 1rem;
+			top: 1rem;
+		}
+	}
+}
