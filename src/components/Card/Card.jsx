@@ -5,11 +5,12 @@ import Button from '../Button/Button';
 import dollarSvg from '../../assets/images/icon-dollar.svg';
 import personSvg from '../../assets/images/icon-person.svg';
 const Card = () => {
-	const [bill, setBill] = useState();
-	const [tip, setTip] = useState();
-	const [person, setPerson] = useState(1);
+	const [bill, setBill] = useState(0);
+	const [tip, setTip] = useState(1);
+	const [person, setPerson] = useState();
 	const [tipResult, setTipResult] = useState();
 	const [total, setTotal] = useState();
+	const [personError, setPersonError] = useState(false);
 
 	const regEx = /^[0-9]*\.?[0-9]*$/;
 	const billHandler = (e) => {
@@ -23,7 +24,12 @@ const Card = () => {
 		}
 	};
 	const personHandler = (e) => {
-		if (regEx.test(e.target.value)) {
+		console.log(e.target.value);
+		if (e.target.value < 1) {
+			setPerson(e.target.value);
+			setPersonError(true);
+		} else {
+			setPersonError(false);
 			setPerson(e.target.value);
 		}
 	};
@@ -41,7 +47,6 @@ const Card = () => {
 		}
 	}, [bill, tip, person]);
 
-	console.log(bill, tip);
 	return (
 		<div className={styles.card}>
 			<section className={styles.card__leftside}>
@@ -73,8 +78,7 @@ const Card = () => {
 					<Input
 						id='bill'
 						label='Bill Amount'
-						error={true}
-						placeholder='0'
+						error={personError}
 						img={personSvg}
 						alt='dollar-symbol'
 						onChange={personHandler}
@@ -89,14 +93,14 @@ const Card = () => {
 							<h4>Tip amount</h4>
 							<span>/person</span>
 						</div>
-						<p>${tipResult ? tipResult : '0'}</p>
+						<p>${tipResult || 0}</p>
 					</div>
 					<div className={styles.card__rightside_info_title}>
 						<div>
 							<h4>Tip amount</h4>
 							<span>/person</span>
 						</div>
-						<p>${total ? total : '0'}</p>
+						<p>${total || 0}</p>
 					</div>
 				</div>
 				<Button onClick={resetHandler} text='reset' width='100%' />

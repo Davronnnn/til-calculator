@@ -32,6 +32,9 @@
 				outline: none;
 				border: 2px solid $strong-cyan;
 			}
+			&:hover {
+				border: 2px solid $strong-cyan;
+			}
 		}
 		img {
 			position: absolute;
