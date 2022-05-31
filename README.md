@@ -2,9 +2,15 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-##
+##Built with
+Semantic HTML5 markup
+CSS custom properties
+Scss
+Mobile-first workflow
+React - JS library
+Scss module styles
 
-## Available Scripts
+<!-- ## Available Scripts
 
 In the project directory, you can run:
 
@@ -20,4 +26,4 @@ You may also see any lint errors in the console.
 
 You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+To learn React, check out the [React documentation](https://reactjs.org/). -->
